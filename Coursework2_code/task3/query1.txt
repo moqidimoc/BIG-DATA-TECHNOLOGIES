@@ -1,0 +1,13 @@
+USE log_db;
+
+CREATE TABLE visits (user STRING, visits INT);
+
+INSERT INTO visits SELECT user, COUNT(time) FROM logs GROUP BY user;
+
+SELECT MAX(visits) FROM visits;
+
+---------------------------------------------------------------------------------------------
+
+78
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html#release for an explanation.

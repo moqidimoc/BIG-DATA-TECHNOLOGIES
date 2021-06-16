@@ -1,0 +1,10 @@
+> db.cl.find( { $and: [ { friendsCount: { $lt: 25 } }, { displayName: { $regex: /^A/i } }, { displayName : { $regex: /es$/ } } ] }, { _id: 0, displayName: 1, followersCount: 1, friendsCount: 1} ).sort( { displayName: -1 } )
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+{ "displayName" : "angie torres", "friendsCount" : 23, "followersCount" : 33 }
+{ "displayName" : "angie torres", "friendsCount" : 23, "followersCount" : 33 }
+{ "displayName" : "Arizona Companies", "friendsCount" : 0, "followersCount" : 10 }
+{ "displayName" : "Adejies", "friendsCount" : 13, "followersCount" : 10 }
+{ "displayName" : "Adejies", "friendsCount" : 13, "followersCount" : 10 }
+{ "displayName" : "Adejies", "friendsCount" : 13, "followersCount" : 10 }
