@@ -1,0 +1,9 @@
+USE log_db;
+
+SELECT COUNT(DISTINCT(user)) FROM logs WHERE (CAST(SUBSTRING(time, 7, 6) AS int) BETWEEN 210000 AND 225959) AND (TRIM(query) <> '' OR query IS NOT NULL);
+
+---------------------------------------------------------------------------------------------
+
+69
+WARN: The method class org.apache.commons.logging.impl.SLF4JLogFactory#release() was invoked.
+WARN: Please see http://www.slf4j.org/codes.html#release for an explanation.
